@@ -1,0 +1,55 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+public class SQLDeathCertificate {
+	int uid;
+	String usname;
+	String name;
+	String ddate;
+	int age;
+	String hfname;
+	String dplace;
+	String address;
+	String state;
+	String district;
+	String taluk;
+	String dcause;
+	public SQLDeathCertificate(int uid1,String uname1,String name1,String dedate,int a,String hufname,String deplace,String addr,String state1,String dis,String tal,String decause) throws ClassNotFoundException,SQLException{
+		uid=uid1;
+		usname=uname1;
+		name=name1;
+		ddate=dedate;
+		age=a;
+		hfname=hufname;
+		dplace=deplace;
+		address=addr;
+		state=state1;
+		district=dis;
+		taluk=tal;
+		dcause=decause;
+		String url="jdbc:mysql://localhost:3306/panchayat";
+		String uname="root";
+		String pass="abhishek";
+		String query="insert into Death values(?,?,?,?,?,?,?,?,?,?,?,?);";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con=DriverManager.getConnection(url,uname,pass);
+		PreparedStatement st=con.prepareStatement(query);
+		st.setInt(1, uid);
+		st.setString(2,usname);
+		st.setString(3,name);
+		st.setString(4,ddate);
+		st.setInt(5,age);
+		st.setString(6,hfname);
+		st.setString(7,dplace);
+		st.setString(8,address);
+		st.setString(9,state);
+		st.setString(10,district);
+		st.setString(11,taluk);
+		st.setString(12,dcause);
+		int count=st.executeUpdate();
+		System.out.println(count+" row/s affected");
+		st.close();
+		con.close();
+	}
+}

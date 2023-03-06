@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="200.0" style="-fx-background-color: skyBlue;" BorderPane.alignment="CENTER">
+         <children>
+            <Ellipse fill="DODGERBLUE" layoutX="100.0" layoutY="173.0" radiusX="95.0" radiusY="39.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="44.0" layoutY="144.0" text="Panchayat" textAlignment="JUSTIFY" textFill="#253906" textOverrun="CLIP">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="147.0" fitWidth="165.0" layoutX="24.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/gram.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="66.0" fitWidth="77.0" layoutX="74.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/nitte.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="180.0" text="Login " textAlignment="JUSTIFY" textFill="#d0532c" textOverrun="CLIP">
+               <font>
+                  <Font name="Candara" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="71.0" layoutY="180.0" startX="-41.5" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="1200.0" style="-fx-background-color: lightGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="57.0" layoutY="88.0" opacity="0.54" text="Secure Login" textAlignment="JUSTIFY" textFill="#b90d0d" textOverrun="CLIP">
+               <font>
+                  <Font name="Gill Sans MT" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="167.0" text="User ID:">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="207.0" prefHeight="40.0" prefWidth="69.0" text="Password:">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordPasswordField" layoutX="118.0" layoutY="214.0" promptText="password" />
+            <TextField fx:id="UserIDTextField" layoutX="120.0" layoutY="174.0" promptText="User ID" />
+            <Button fx:id="LoginButton" layoutX="93.0" layoutY="275.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: red;" text="Login" textAlignment="CENTER" textFill="#0d0d0d" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
